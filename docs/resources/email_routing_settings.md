@@ -17,7 +17,8 @@ Accepted Permissions
 
 ```terraform
 resource "cloudflare_email_routing_settings" "example_email_routing_settings" {
-  zone_id = "023e105f4ecef8ad9ca31a8372d0c353"
+  zone_id            = "023e105f4ecef8ad9ca31a8372d0c353"
+  support_subaddress = true
 }
 ```
 
@@ -30,7 +31,7 @@ resource "cloudflare_email_routing_settings" "example_email_routing_settings" {
 
 ### Optional
 
-- `support_subaddress` (Boolean) Whether subaddressing (plus-addressing) is honored when matching incoming mail against routing rules.
+- `support_subaddress` (Boolean) Whether subaddressing (plus-addressing) is honored when matching incoming mail against routing rules. When omitted, preserves the existing setting.
 
 ### Read-Only
 
